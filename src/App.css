@@ -1,33 +1,84 @@
-.App {
-  text-align: center;
+html, body { margin: 0; }
+
+body {
+  color: white;
+  height:100vh;
+  overflow: hidden;
+  font-size: 1em;
+  line-height: 147%;
+  background: #161d46;
+  background: -moz-linear-gradient(top, #784360 0%, #161d46 100%);
+  background: -webkit-linear-gradient(top, #784360 0%,#161d46 100%);
+  background: linear-gradient(to bottom, #784360 0%,#161d46 100%);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.planet-card {
+  width: 95%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+img{
+  width: 70%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+/* big buttons, no circle */
+.next {
+  position: absolute;
+  right: 0;
+}
+.flickity-prev-next-button {
+  background: transparent;
+  position: absolute;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  border:0;
+  margin: 10px;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flickity-page-dots {
+  bottom: 0px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
 }
