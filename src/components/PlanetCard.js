@@ -7,7 +7,6 @@ const PlanetCard = props => {
       <img src={`../images/${planet.name}.png`} />
       <div className="planet-label">
         <h3>{planet.name}</h3>
-        <p>+info</p>
       </div>
     </article>
   )
