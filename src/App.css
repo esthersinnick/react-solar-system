@@ -194,7 +194,7 @@ img{
   justify-content: flex-end;
 }
 
-@media (min-width:768px){
+@media (min-width:991px){
   .planet-card {
     width: 10%;
   }
