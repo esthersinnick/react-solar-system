@@ -15,10 +15,9 @@ function App() {
       <BreakpointProvider>
         <div className="stars-bg">
           <Stars />
-          <div className="sun"></div>
         </div>
         <header>
-          <h1>The Solar System</h1>
+          <h1 className="fade-in">The Solar System</h1>
         </header>
         <main className="container">
           <Switch>

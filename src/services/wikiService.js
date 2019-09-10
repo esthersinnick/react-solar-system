@@ -8,6 +8,38 @@ class WikiService {
     })
   }
 
+  async getPlanet(planet) {
+    switch (planet) {
+      case 'mercury':
+        const mercury = await this.getMercuryDesc()
+        return mercury;
+      case 'venus':
+        const venus = await this.getVenusDesc()
+        return venus;
+      case 'earth':
+        const earth = await this.getEarthDesc()
+        return earth;
+      case 'mars':
+        const mars = await this.getMarsDesc()
+        return mars;
+      case 'jupiter':
+        const jupiter = await this.getJupiterDesc()
+        return jupiter;
+      case 'saturn':
+        const saturn = await this.getSaturnDesc()
+        return saturn;
+      case 'uranus':
+        const uranus = await this.getUranusDesc()
+        return uranus;
+      case 'neptune':
+        const neptune = await this.getNeptuneDesc()
+        return neptune;
+      case 'pluto':
+        const pluto = await this.getPlutoDesc()
+        return pluto;
+    }
+  }
+
   async getMercuryDesc() {
     const mercury = await this.wiki.get('api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=Mercury_(planet)')
     return mercury.data.query.pages[19694].extract;

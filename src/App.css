@@ -176,15 +176,13 @@ img{
   text-transform: uppercase;
   letter-spacing: 5px;
   font-family: 'Nixie One';
-  border-bottom: 1px solid white;
-  border-left: 1px solid white;
   padding: 0 40px;
   min-width: 175px;
-  
   transition: all 2s;
   margin-top: 0px;
   opacity: 0;
 }
+
 
 .is-selected .planet-label {
   transition: all 2s;
@@ -270,4 +268,54 @@ img{
   .Uranus img{width:72%}
   .Neptune img{width:75%}
   .Pluto img{width:30%}
+}
+
+.loading{
+  width:200px;
+  margin:auto;
+}
+
+.Mercury{opacity: 0; animation:fadeIn 1.6s ease 1s, planetsFloating 3.9s infinite 2.6s;}
+.Venus{opacity: 0; animation: fadeIn 1.6s ease 1.3s, planetsFloating 4.4s infinite 2.9s;}
+.Earth{opacity: 0; animation: fadeIn 1.6s ease 1.6s, planetsFloating 4.2s infinite 3.2s;}
+.Mars{opacity: 0; animation: fadeIn 1.6s ease 1.9s, planetsFloating 3.7s infinite 3.5s;}
+.Jupiter{opacity: 0; animation: fadeIn 1.6s ease 2.1s, planetsFloating 4s infinite 3.7s;}
+.Saturn{opacity: 0; animation: fadeIn 1.6s ease 2.4s, planetsFloating 4.1s infinite 4s;}
+.Uranus{opacity: 0; animation: fadeIn 1.6s ease 2.7s, planetsFloating 3.8s infinite 4.3s;}
+.Neptune{opacity: 0; animation: fadeIn 1.6s ease 3s, planetsFloating 3.5s infinite 4.6s;}
+.Pluto{opacity: 0; animation: fadeIn 1.6s ease 3.3s, planetsFloating 5s infinite 4.9s;}
+
+
+.fade-in{
+  opacity: 0;
+  animation: fade 0.8s ease 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes planetsFloating {
+  0% {margin-top:0;opacity: 1;}
+  50% {margin-top:10px;opacity: 1;}
+  100%{margin-top:0;opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {
+    margin-top:30px;
+    opacity: 0;
+  }
+
+  100% {
+    margin-top:0;
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
