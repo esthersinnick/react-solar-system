@@ -15,6 +15,7 @@ function App() {
       <BreakpointProvider>
         <div className="stars-bg">
           <Stars />
+          <div className="sun"></div>
         </div>
         <header>
           <h1>The Solar System</h1>

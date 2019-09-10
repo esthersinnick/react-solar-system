@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <section className="planets-list gallery">
-      <Breakpoint small down>
+      <Breakpoint medium down>
         {planets.length > 0 ?
           <Flickity
             className={'carousel'}
@@ -32,6 +32,13 @@ const Home = () => {
             })}
           </Flickity>
           : <p>Loading...</p>}
+      </Breakpoint>
+      <Breakpoint large up>
+        {planets.length > 0 ?
+          planets.map(planet => {
+            return <PlanetCard key={planet.name} planet={planet} />
+          }) : <p>Loading...</p>
+        }
       </Breakpoint>
     </section>
   )

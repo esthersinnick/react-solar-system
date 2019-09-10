@@ -25,7 +25,7 @@ h1{
   display: inline-block;
   font-family: 'Nixie One', cursive;
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: center;
   letter-spacing: 4px;
   line-height: 125%;
@@ -108,7 +108,18 @@ header{
   background: white;
 }
 
-
+.sun{
+  width: 100px;
+  height: 100px;
+  background-color: #FFC107;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  -webkit-box-shadow: 0px 0px 63px 5px rgba(255,102,0,1);
+  -moz-box-shadow: 0px 0px 63px 5px rgba(255,102,0,1);
+  box-shadow: 0px 0px 63px 5px rgba(255,102,0,1);
+}
 
 .stars-bg{
   width: 100%;
@@ -176,6 +187,33 @@ img{
   opacity: 1;
 }
 
+
+.breakpoint__large-up {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 @media (min-width:768px){
-  
+  .planet-card {
+    width: 10%;
+  }
+
+  .sun{
+    position: absolute;
+    left: -480px;
+    width: 600px;
+    height: 600px;
+    top: calc(50% - 300px);
+  }
+
+  .Mercury img{width:35%}
+  .Venus img{width:70%}
+  .Earth img{width:65%}
+  .Mars img{width:60%}
+  .Jupiter img{width:85%}
+  .Saturn img{width:85%}
+  .Uranus img{width:72%}
+  .Neptune img{width:75%}
+  .Pluto img{width:30%}
 }
