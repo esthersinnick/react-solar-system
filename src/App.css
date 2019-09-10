@@ -40,6 +40,11 @@ h1{
 
 h3{
   margin-top: 0;
+  font-size: 1.5em;
+}
+
+a{
+  text-decoration: none;
 }
 
 header{
@@ -187,16 +192,65 @@ img{
   opacity: 1;
 }
 
-
 .breakpoint__large-up {
   display: flex;
   width: 100%;
   justify-content: flex-end;
 }
 
+.planet-card article {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width:991px){
+
+  h3{
+    font-size: 0.8em;
+  }
+
   .planet-card {
     width: 10%;
+    cursor: pointer;
+  }
+
+  .planet-card article {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .planet-label{
+    border:0;
+  }
+
+  .planet-label-line{
+    border-left: 1px solid white;
+    transition: all 2s;
+    height: 0;
+    margin-bottom: 0;  
+  }
+
+  .planet-card:hover .planet-label {
+    transition: all 2s;
+    /*margin-top: 100px;*/
+    opacity: 1;
+  }
+
+  .planet-label:hover{
+    opacity: 1;
+  }
+
+  .planet-card:hover .planet-label-line{
+    transition: all 2s;
+    height: 60px;
+    border-left: 1px solid white;
+    margin-bottom: 20px;
   }
 
   .sun{
