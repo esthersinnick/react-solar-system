@@ -275,6 +275,18 @@ img{
   margin:auto;
 }
 
+.planet-detail{
+  margin: auto;
+  width: 80%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.planet-data, .planet-description{
+  width: 50%;
+}
+
 .Mercury{opacity: 0; animation:fadeIn 1.6s ease 1s, planetsFloating 3.9s infinite 2.6s;}
 .Venus{opacity: 0; animation: fadeIn 1.6s ease 1.3s, planetsFloating 4.4s infinite 2.9s;}
 .Earth{opacity: 0; animation: fadeIn 1.6s ease 1.6s, planetsFloating 4.2s infinite 3.2s;}

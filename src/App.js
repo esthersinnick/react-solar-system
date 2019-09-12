@@ -22,7 +22,7 @@ function App() {
         <main className="container">
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/planet/:name" component={DetailPage} />
+            <Route path="/:name" component={DetailPage} />
           </Switch>
         </main>
       </BreakpointProvider>

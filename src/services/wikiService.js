@@ -10,31 +10,31 @@ class WikiService {
 
   async getPlanet(planet) {
     switch (planet) {
-      case 'mercury':
+      case 'Mercury':
         const mercury = await this.getMercuryDesc()
         return mercury;
-      case 'venus':
+      case 'Venus':
         const venus = await this.getVenusDesc()
         return venus;
-      case 'earth':
+      case 'Earth':
         const earth = await this.getEarthDesc()
         return earth;
-      case 'mars':
+      case 'Mars':
         const mars = await this.getMarsDesc()
         return mars;
-      case 'jupiter':
+      case 'Jupiter':
         const jupiter = await this.getJupiterDesc()
         return jupiter;
-      case 'saturn':
+      case 'Saturn':
         const saturn = await this.getSaturnDesc()
         return saturn;
-      case 'uranus':
+      case 'Uranus':
         const uranus = await this.getUranusDesc()
         return uranus;
-      case 'neptune':
+      case 'Neptune':
         const neptune = await this.getNeptuneDesc()
         return neptune;
-      case 'pluto':
+      case 'Pluto':
         const pluto = await this.getPlutoDesc()
         return pluto;
     }
