@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import solarSystemService from '../services/solarSystemService';
 import PlanetCard from '../components/PlanetCard';
 
 import Flickity from 'react-flickity-component';
@@ -20,9 +19,6 @@ const Home = () => {
     { name: 'Neptune' },
     { name: 'Pluto' }
   ];
-  // const [planets, setPlanets] = useState([]);
-
-  // useEffect(() => { solarSystemService.getData().then(planets => setPlanets(planets.data)) }, [])
 
   return (
     <section className="planets-list gallery">

@@ -58,6 +58,11 @@ a{
   color: white;
 }
 
+button{
+  background: none;
+  border:0;
+}
+
 .button {
   overflow: hidden;
   font-family: 'Nixie One';
