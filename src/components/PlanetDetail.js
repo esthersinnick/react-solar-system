@@ -17,7 +17,7 @@ const PlanetDetail = props => {
         <div className="planet-description">
           <h3>{state.planet.name}</h3>
           <p>{state.description}</p>
-          <button onClick={goToPreviousPage}>Back</button>
+          <a className="button" onClick={goToPreviousPage}>Back</a>
         </div>
       </article>
     </section>

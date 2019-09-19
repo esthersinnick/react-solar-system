@@ -45,7 +45,50 @@ h3{
 
 a{
   text-decoration: none;
+  color: white;
 }
+
+.button {
+  overflow: hidden !important;
+  font-family: 'Nixie One', cursive;
+  font-weight:400;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid white;
+  margin: 0;
+  text-align: center;
+  align-self: center;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size:1em;
+  line-height:5em;
+  padding: 10px 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  max-width: 120px;
+}
+
+.button:hover{
+  color:rgb(56, 56, 56);
+}
+
+.button::before{
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:100%;
+  height:0;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: all 0.4s ease;
+  z-index:-1;
+}
+
+.button:hover::before{
+  height: 380%;
+}
+
 
 header{
   text-align: center;
