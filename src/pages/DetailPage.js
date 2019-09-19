@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import solarSystemService from '../services/solarSystemService';
 import wikiService from '../services/wikiService';
 import PlanetDetail from '../components/PlanetDetail';
+import Loading from '../components/Loading';
+
 
 const DetailPage = props => {
   const [state, setPlanet] = useState({});
@@ -25,9 +27,8 @@ const DetailPage = props => {
     <div>
       {
         state.planet && state.description ?
-          <PlanetDetail state={state} />
-          :
-          <p>Loading...</p>
+          <PlanetDetail state={state} />:
+          <Loading />
       }
     </div>
   )

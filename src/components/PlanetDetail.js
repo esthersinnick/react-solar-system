@@ -15,7 +15,7 @@ const PlanetDetail = props => {
           <img src={`../images/${state.planet.name}.png`} alt={state.planet.name} />
         </div>
         <div className="planet-description">
-          <h3>{state.planet.name}</h3>
+          <h2>{state.planet.name}</h2>
           <p>{state.description}</p>
           <a className="button" onClick={goToPreviousPage}>Back</a>
         </div>
