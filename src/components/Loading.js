@@ -51,7 +51,7 @@ export default class Loading extends Component {
     };
     const {messages} = this.state
     return(
-      <div className="loading fade-in">
+      <div className="loading">
         <Lottie options={defaultOptions}
           height={150}
           width={150}
