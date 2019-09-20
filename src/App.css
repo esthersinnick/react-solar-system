@@ -76,7 +76,7 @@ button{
   text-decoration: none;
   font-size:1em;
   padding: 10px 30px;
-  position: absolute;
+  position: relative;
   transition: all 0.4s ease;
   max-width: 120px;
   cursor: pointer;
@@ -296,6 +296,10 @@ img{
     font-size: 0.8em;
   }
 
+  .button{
+    margin-top:30px;
+  }
+
   .planet-card {
     width: 10%;
     cursor: pointer;
@@ -386,8 +390,14 @@ img{
     flex-direction: row;
   }
 
-  .planet-image, .planet-description{
+  .planet-image{
     width: 50%;
+  }
+
+  .planet-description, .planet-data{
+    width:500px;
+    background-color: red;
+    height: 300px;
   }
 }
 
