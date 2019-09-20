@@ -45,7 +45,7 @@ h2{
   color: white;
   letter-spacing: 5px;
   min-width: 175px;
-  margin-top: 0px;
+  margin: 35px 0;
 }
 
 h3{
@@ -70,7 +70,6 @@ button{
   text-transform: uppercase;
   color: white;
   border: 1px solid white;
-  margin: 30px 0 0 0;
   text-align: center;
   align-self: center;
   letter-spacing: 4px;
@@ -221,12 +220,18 @@ header{
 
 img{
   transition: all 1s;
-  width: 70%;
+  max-width: 75%;
+  max-height: 75%;
+  width: auto;
+  height: auto;
 }
 
 .is-selected img{
   transition: all 1s;
-  width:80%;
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
 }
 
 .planet-label {
@@ -261,6 +266,28 @@ img{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.planet-image{
+  display: flex;
+  justify-content: center;
+}
+
+.planet-detail{
+  margin: auto;
+  width: 80%;
+  max-width: 1100px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons-wrapper{
+  width: 100%;
+  display: flex;
 }
 
 @media (min-width:991px){
@@ -318,29 +345,50 @@ img{
     top: calc(50% - 300px);
   }
 
-  .Mercury img{width:35%}
-  .Venus img{width:70%}
-  .Earth img{width:65%}
-  .Mars img{width:60%}
-  .Jupiter img{width:85%}
-  .Saturn img{width:85%}
-  .Uranus img{width:72%}
-  .Neptune img{width:75%}
-  .Pluto img{width:30%}
-}
+  .Mercury img{
+    width:35%;
+    max-width: 100%;
+  }
+  .Venus img{
+    width:70%;
+    max-width: 100%;
+  }
+  .Earth img{
+    width:65%;
+    max-width: 100%;
+  }
+  .Mars img{
+    width:60%;
+    max-width: 100%;
+  }
+  .Jupiter img{
+    width:85%;
+    max-width: 100%;
+  }
+  .Saturn img{
+    width:85%;
+    max-width: 100%;
+  }
+  .Uranus img{
+    width:72%;
+    max-width: 100%;
+  }
+  .Neptune img{
+    width:75%;
+    max-width: 100%;
+  }
+  .Pluto img{
+    width:30%;
+    max-width: 100%;
+  }
 
-.planet-detail{
-  margin: auto;
-  width: 80%;
-  max-width: 1100px;
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .planet-detail{
+    flex-direction: row;
+  }
 
-.planet-data, .planet-description{
-  width: 50%;
+  .planet-image, .planet-description{
+    width: 50%;
+  }
 }
 
 .Mercury{opacity: 0; animation:fadeIn 1.6s ease 1s, planetsFloating 3.9s infinite 2.6s;}

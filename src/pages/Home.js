@@ -1,9 +1,8 @@
 import React from 'react';
-
-import PlanetCard from '../components/PlanetCard';
-
 import Flickity from 'react-flickity-component';
 import { Breakpoint } from 'react-socks';
+
+import PlanetCard from '../components/PlanetCard';
 
 const flickityOptions = { initialIndex: 0 }
 

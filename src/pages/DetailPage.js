@@ -15,7 +15,7 @@ const DetailPage = props => {
     Promise.all([dataP, descriptionP])
       .then(([data, descriptionData]) => {
         const planet = data.find(element => element.name === name)
-        const edited = descriptionData.substr(0, 300);
+        const edited = descriptionData.substr(0, 250);
         const index = edited.lastIndexOf('. ')
         const description = edited.substr(0, index + 1);
         return { planet, description }
@@ -27,7 +27,7 @@ const DetailPage = props => {
     <div>
       {
         state.planet && state.description ?
-          <PlanetDetail state={state} />:
+          <PlanetDetail state={state} /> :
           <Loading />
       }
     </div>
