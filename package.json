@@ -5,9 +5,9 @@
   "dependencies": {
     "axios": "^0.19.0",
     "react": "^16.9.0",
-    "react-card-flip": "^0.8.1", //el primero que he probado
     "react-dom": "^16.9.0",
     "react-flickity-component": "^3.3.1",
+    "react-flippy": "^0.1.5",
     "react-lottie": "^1.2.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",

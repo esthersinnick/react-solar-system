@@ -12,7 +12,6 @@ const PlanetCardBack = props => {
       <p>Mean temperature: {planet.mean_temperature}</p>
       <p>Length of day: {planet.length_of_day}</p>
       <p>Number of moons: {planet.number_of_moons > 0 && planet.number_of_moons}</p>
-      <button onClick={handleClick}>Click to flip</button>
     </div>
   )
 }

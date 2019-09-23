@@ -5,7 +5,6 @@ import wikiService from '../services/wikiService';
 import PlanetDetail from '../components/PlanetDetail';
 import Loading from '../components/Loading';
 
-
 const DetailPage = props => {
   const [state, setPlanet] = useState({});
   const { name } = props.match.params;

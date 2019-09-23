@@ -8,7 +8,6 @@ const PlanetCardFront = props => {
     <div className="planet-description">
       <h2>{planet.name}</h2>
       <p>{description}</p>
-      <button onClick={handleClick}>Click to flip</button>
     </div>
   )
 }
