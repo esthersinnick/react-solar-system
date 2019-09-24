@@ -16,4 +16,4 @@ const PlanetCard = props => {
   )
 }
 
-export default PlanetCard
+export default PlanetCard;

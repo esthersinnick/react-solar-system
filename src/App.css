@@ -80,6 +80,7 @@ button{
   transition: all 0.4s ease;
   max-width: 120px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 .button:hover{
@@ -303,9 +304,11 @@ img{
   .planet-card {
     width: 10%;
     cursor: pointer;
+    /*height: auto;*/
   }
 
   .planet-card article {
+    height: 70vh;
     width: 100%;
     text-align: center;
     display: flex;
@@ -394,10 +397,8 @@ img{
     width: 50%;
   }
 
-  .planet-description, .planet-data{
-    width:500px;
-    background-color: red;
-    height: 300px;
+  .planet-info{
+    width:50%;
   }
 }
 
@@ -458,4 +459,14 @@ img{
   font-size: 1.2em;
   line-height: 1.5em;
   margin: 0;
+}
+
+.planet-data{
+  display: flex;
+}
+
+.buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
