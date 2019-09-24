@@ -461,12 +461,33 @@ img{
   margin: 0;
 }
 
-.planet-data{
-  display: flex;
-}
-
 .buttons-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.planet-data, .planet-description{
+  opacity:1;
+  transition: ease all 0.6s;
+}
+
+.hide-card{
+  opacity: 0;
+  transition: ease all 0.6s;
+}
+
+.planet-info-wrapper{
+  position: relative;
+}
+
+.planet-data{
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+.planet-data p{
+  margin: 0;
+  padding: 0;
 }
