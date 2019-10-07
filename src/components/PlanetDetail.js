@@ -1,6 +1,6 @@
 import React from 'react'
 import PlanetDetailCard from './PlanetDetailCard'
-import { Breakpoint } from 'react-socks';
+//import { Breakpoint } from 'react-socks';
 
 const PlanetDetail = props => {
   const { state } = props

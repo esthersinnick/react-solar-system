@@ -20,7 +20,7 @@ const DetailPage = props => {
         return { planet, description }
       })
       .then(setPlanet)
-  }, [])
+  }, [name])
 
   return (
     <div>
