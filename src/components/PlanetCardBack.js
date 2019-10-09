@@ -1,4 +1,11 @@
 import React from 'react';
+import { ReactComponent as DayNight } from '../files/SVG/day-night.svg'
+import { ReactComponent as DistanceSun } from '../files/SVG/distance-sun.svg'
+import { ReactComponent as Gravity } from '../files/SVG/gravity.svg'
+import { ReactComponent as Mass } from '../files/SVG/mass.svg'
+import { ReactComponent as Moon } from '../files/SVG/moon.svg'
+import { ReactComponent as Temperature } from '../files/SVG/temperature.svg'
+
 
 const PlanetCardBack = props => {
   const { state, isToggled } = props;
@@ -6,12 +13,16 @@ const PlanetCardBack = props => {
 
   return (
     <div className={!isToggled ? 'planet-data hide-card' : 'planet-data'}>
-      <p><img src="images/star.png" alt="Distance from Sun" />{planet.distance_from_sun}</p>
-      <p><img src="images/star.png" alt="Gravity" />{planet.gravity}</p>
-      <p><img src="images/star.png" alt="Mass" />{planet.mass}</p>
-      <p><img src="images/star.png" alt="Mean temperature" />{planet.mean_temperature}</p>
-      <p><img src="images/star.png" alt="Length of day" />{planet.length_of_day}</p>
-      {planet.number_of_moons > 0 && <p><img src="images/star.png" alt="Number of moons" />{planet.number_of_moons}</p>}
+      <div className="icons-wrapper">
+        <p><DistanceSun />{planet.distance_from_sun}</p>
+        <p><Gravity />{planet.gravity}</p>
+        <p><Mass className="mass-icon" />{planet.mass}</p>
+      </div>
+      <div className="icons-wrapper">
+        <p><Temperature className="temperature-icon" />{planet.mean_temperature}</p>
+        <p><DayNight />{planet.length_of_day}</p>
+        {planet.number_of_moons > 0 && <p><Moon className="moon-icon" />{planet.number_of_moons}</p>}
+      </div>
     </div>
   )
 }
