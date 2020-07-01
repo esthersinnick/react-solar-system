@@ -10,15 +10,6 @@ const DetailPage = props => {
   const { name } = props.match.params;
 
   const getData = useCallback(async () => {
-    const planets = await solarSystemService.getData()
-    const description = await wikiService.getPlanet(name)
-    return { data: planets.data, description}
-  },[name]);
-
-  useEffect(() => {
-    const planet = getData()
-    console.log(planet)
-    setPlanet(planet)
     // const dataP = solarSystemService.getData().then(planets => planets.data);
     // const descriptionP = wikiService.getPlanet(name);
     // Promise.all([dataP, descriptionP])
@@ -30,6 +21,17 @@ const DetailPage = props => {
     //     return { planet, description }
     //   })
     //   .then(setPlanet)
+    const planets = await solarSystemService.getData()
+    console.log(planets)
+    const description = await wikiService.getPlanet(name)
+    console.log(description)
+    return { data: planets.data, description}
+  },[name]);
+
+  useEffect(() => {
+    const planet = getData()
+    console.log(planet)
+    setPlanet(planet)
   }, [getData])
 
   return (
