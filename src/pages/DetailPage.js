@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 import solarSystemService from '../services/solarSystemService';
 import wikiService from '../services/wikiService';
@@ -9,19 +9,28 @@ const DetailPage = props => {
   const [state, setPlanet] = useState({});
   const { name } = props.match.params;
 
+  const getData = useCallback(async () => {
+    const planets = await solarSystemService.getData()
+    const description = await wikiService.getPlanet(name)
+    return { data: planets.data, description}
+  },[name]);
+
   useEffect(() => {
-    const dataP = solarSystemService.getData().then(planets => planets.data);
-    const descriptionP = wikiService.getPlanet(name);
-    Promise.all([dataP, descriptionP])
-      .then(([data, descriptionData]) => {
-        const planet = data.find(element => element.name === name)
-        const edited = descriptionData.substr(0, 250);
-        const index = edited.lastIndexOf('. ')
-        const description = edited.substr(0, index + 1);
-        return { planet, description }
-      })
-      .then(setPlanet)
-  }, [name])
+    const planet = getData()
+    console.log(planet)
+    setPlanet(planet)
+    // const dataP = solarSystemService.getData().then(planets => planets.data);
+    // const descriptionP = wikiService.getPlanet(name);
+    // Promise.all([dataP, descriptionP])
+    //   .then(([data, descriptionData]) => {
+    //     const planet = data.find(element => element.name === name)
+    //     const edited = descriptionData.substr(0, 250);
+    //     const index = edited.lastIndexOf('. ')
+    //     const description = edited.substr(0, index + 1);
+    //     return { planet, description }
+    //   })
+    //   .then(setPlanet)
+  }, [getData])
 
   return (
     <div>

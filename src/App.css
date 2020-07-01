@@ -443,6 +443,15 @@ img{
     margin-bottom: 20px;
   }
 
+  .planet-image{
+    align-items: start;
+  }
+
+  .planet-image img {
+    height: 100%;
+    width: 100%;
+  }
+
   .sun{
     position: absolute;
     left: -480px;
