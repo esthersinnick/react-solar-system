@@ -15,8 +15,7 @@ const Home = () => {
     { name: 'Jupiter' },
     { name: 'Saturn' },
     { name: 'Uranus' },
-    { name: 'Neptune' },
-    { name: 'Pluto' }
+    { name: 'Neptune' }
   ];
 
   return (

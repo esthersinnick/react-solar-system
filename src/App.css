@@ -374,17 +374,32 @@ img{
   justify-content: space-around;
 }
 
+/**
+* MEDIA QUERIES *
+**/
 
 @media (min-width:991px){
 
+  
   h3{
     font-size: 0.8em;
   }
-
+  
   .button{
     margin-top:30px;
   }
-
+  
+  
+  .planets-list{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .breakpoint__large-up {
+    width: calc(100% - 120px);
+    justify-content: space-evenly;
+  }
+  
   .planet-card {
     width: 10%;
     cursor: pointer;
@@ -468,10 +483,6 @@ img{
     width:75%;
     max-width: 100%;
   }
-  .Pluto img{
-    width:30%;
-    max-width: 100%;
-  }
 
   .planet-detail{
     flex-direction: row;
@@ -495,7 +506,6 @@ img{
 .Saturn{opacity: 0; animation: fadeIn 1.6s ease 2.4s, planetsFloating 4.1s infinite 4s;}
 .Uranus{opacity: 0; animation: fadeIn 1.6s ease 2.7s, planetsFloating 3.8s infinite 4.3s;}
 .Neptune{opacity: 0; animation: fadeIn 1.6s ease 3s, planetsFloating 3.5s infinite 4.6s;}
-.Pluto{opacity: 0; animation: fadeIn 1.6s ease 3.3s, planetsFloating 5s infinite 4.9s;}
 
 
 .fade-in{
@@ -505,19 +515,19 @@ img{
 }
 
 @keyframes planetsFloating {
-  0% {margin-top:0;opacity: 1;}
-  50% {margin-top:10px;opacity: 1;}
-  100%{margin-top:0;opacity: 1;}
+  0% {transform:translateY(0);opacity: 1;}
+  50% {transform:translateY(10px);opacity: 1;}
+  100%{transform:translateY(0);opacity: 1;}
 }
 
 @keyframes fadeIn {
   0% {
-    margin-top:30px;
+    transform:translateY(30px);
     opacity: 0;
   }
 
   100% {
-    margin-top:0;
+    transform:translateY(0);
     opacity: 1;
   }
 }

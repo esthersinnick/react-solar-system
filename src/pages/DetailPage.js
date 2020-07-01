@@ -8,6 +8,7 @@ import Loading from '../components/Loading';
 const DetailPage = props => {
   const [state, setPlanet] = useState({});
   const { name } = props.match.params;
+
   useEffect(() => {
     const dataP = solarSystemService.getData().then(planets => planets.data);
     const descriptionP = wikiService.getPlanet(name);
