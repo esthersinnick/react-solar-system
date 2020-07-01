@@ -4,7 +4,7 @@ import axios from 'axios';
 class WikiService {
   constructor() {
     this.wiki = axios.create({
-      baseURL: 'https://en.wikipedia.org/w/'
+      baseURL: 'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/'
     })
   }
 

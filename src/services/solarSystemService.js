@@ -3,7 +3,7 @@ import axios from 'axios';
 class SolarSystemService {
   constructor() {
     this.data = axios.create({
-      baseURL: 'https://dry-plains-91502.herokuapp.com/planets'
+      baseURL: 'https://cors-anywhere.herokuapp.com/https://dry-plains-91502.herokuapp.com/planets'
     })
   }
 
