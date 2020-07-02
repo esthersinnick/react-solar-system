@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import solarSystemService from '../services/solarSystemService';
 import wikiService from '../services/wikiService';
